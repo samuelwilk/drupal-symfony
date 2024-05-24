@@ -1,0 +1,23 @@
+/.build
+/config
+/node_modules
+/upstream-configuration
+/vendor
+/.idea
+/.gitattributes
+/.gitignore
+composer.lock
+package-lock.json
+
+# Ignore all Drupal Core and Drupal Contrib files except for our
+# custom modules and themes.
+!/web
+/web/*
+!/web/modules
+!/web/themes
+/web/modules/*
+/web/themes/*
+!/web/modules/custom
+!/web/themes/custom
+/web/themes/custom/**/dist/
+/web/themes/custom/**/storybook-static/*

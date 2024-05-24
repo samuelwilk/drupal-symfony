@@ -1,0 +1,34 @@
+{
+  "name": "rapidkit",
+  "version": "0.0.1",
+  "description": "Project tooling",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZuCommunications/rapidkit.git"
+  },
+  "author": "zu (https://zu.com)",
+  "license": "ISC",
+  "devDependencies": {
+    "@commitlint/cli": "^18.2.0",
+    "@commitlint/config-conventional": "^18.1.0",
+    "cypress": "^13.8.1",
+    "eslint": "^8.47.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-cypress": "^3.2.0",
+    "eslint-plugin-import": "^2.28.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.0.2",
+    "prettier": "^3.0.2"
+  },
+  "scripts": {
+    "lint": "eslint --no-error-on-unmatched-pattern --no-eslintrc -c .eslintrc.json '.husky/**/*.js' 'cypress.config.js' 'cypress/**/*.js' 'web/{modules,profiles,theme}/custom/**/*.{js}'",
+    "lint:fix": "eslint --no-error-on-unmatched-pattern --no-eslintrc -c .eslintrc.json --fix '.husky/**/*.js' 'cypress.config.js' 'cypress/**/*.js' 'web/{modules,profiles,theme}/custom/**/*.{js}'",
+    "format": "prettier --check .",
+    "format:fix": "prettier --write .",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "prepare": "husky install"
+  }
+}
